@@ -52,7 +52,7 @@ function askName() {{
   return name;
 }}
 
-export function displayCards() {{
+ function displayCards() {{
   const name = askName();
   if (!name) return;
 
@@ -71,7 +71,7 @@ export function displayCards() {{
   }});
 }}
 
-export async function showLog() {{
+ async function showLog() {{
   const logDiv = document.getElementById("log");
   logDiv.innerHTML = "<em>Betöltés...</em>";
   const q = query(collection(db, "choices"));
