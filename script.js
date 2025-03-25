@@ -1,27 +1,17 @@
 
-import {{ initializeApp }} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import {{
-  getFirestore,
-  collection,
-  getDocs,
-  setDoc,
-  doc,
-  query
-}} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
 // Firebase konfiguráció
-const firebaseConfig = {{
+const firebaseConfig = {
   apiKey: "AIzaSyDT6pkTGe0COhjZU6cR8B2jo8xvL930bXs",
   authDomain: "kedvesseg-app.firebaseapp.com",
   projectId: "kedvesseg-app",
   storageBucket: "kedvesseg-app.firebasestorage.app",
   messagingSenderId: "50423971619",
   appId: "1:50423971619:web:120d549c27c8a58cfb5696"
-}};
+};
 
 // Inicializálás
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 // Kihívások
 const challenges = [
