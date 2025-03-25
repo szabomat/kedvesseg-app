@@ -40,3 +40,27 @@ h1 {
     transform: scale(1.02);
     background: #ffd6d6;
 }
+
+button {
+    margin: 20px auto;
+    display: block;
+    background: #ffb6b6;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#log {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fff0f5;
+    border-radius: 10px;
+}
+
+.log-entry {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+}

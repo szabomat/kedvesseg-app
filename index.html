@@ -2,26 +2,27 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kedvesség-nap</title>
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="manifest" href="manifest.json">
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js');
-      }
-    </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kedvesség-nap</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
 </head>
 <body>
-    <div class="app">
-        <h1>Válassz egy mai kedvességet</h1>
-        <div class="cards" id="cards">
-            <!-- Ide jönnek a kártyák -->
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <div class="app">
+    <h1>Válassz egy mai kedvességet</h1>
+    <div class="cards" id="cards"></div>
+    <button id="log-button">📖 Kedvesség-napló</button>
+    <div id="log" class="log"></div>
+  </div>
+  <script type="module">
+    import {{ showLog }} from './script.js';
+    document.getElementById('log-button').addEventListener('click', showLog);
+  </script>
 </body>
 </html>
