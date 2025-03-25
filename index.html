@@ -20,9 +20,10 @@
     <button id="log-button">📖 Kedvesség-napló</button>
     <div id="log" class="log"></div>
   </div>
-  <script type="module">
-    import {{ showLog }} from './script.js';
-    document.getElementById('log-button').addEventListener('click', showLog);
-  </script>
+<script type="module">
+  import { showLog, displayCards } from './script.js';
+  document.getElementById('log-button').addEventListener('click', showLog);
+  displayCards(); // <<< Ezt most hiányzik
+</script>
 </body>
 </html>
